@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  nav {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .gallery {
+    display: grid;
+    gap: 5px;
+    margin: 20px;
+  }
+  
+  .images img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Screen Size For Tablet */
+  @media screen and (min-width: 600px) {
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+
+    nav {
+      text-align: right;
+    }
+    
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Screen Size For Desktop */
+  @media screen and (min-width: 992px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .images:nth-child(7) {
+      grid-column: span 2;
+    }
+  }
+  
